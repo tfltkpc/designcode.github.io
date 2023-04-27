@@ -1,0 +1,16 @@
+#div {
+  width: 150px;
+  height: 25px;
+  background-color: orange;
+  overflow-x: auto;
+}
+
+#div div {
+  height: 25px;
+  width: 850px;
+  background-color: black;
+}
+
+body {
+  color: white;
+}
