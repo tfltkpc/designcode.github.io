@@ -9,4 +9,22 @@
 </div>
 <hr />
 <button onClick="scrollToTop('div')">Scroll to Top</button>
-<button onClick="scrollSmoothlyToTop('div')">Scroll <b>smoothly</b> to Top</button
+<button onClick="scrollSmoothlyToTop('div')">Scroll <b>smoothly</b> to Top</button>
+
+<script>
+const scrollSmoothlyToBottom = (id) => {
+  const element = $(`#${id}`);
+  element.animate({
+    scrollLeft: element.prop("scrollWidth")
+  }, 10000, 'linear');
+  scrollSmoothlyToTop('div');
+  scrollSmoothlyToBottom('div');
+}
+
+// Require jQuery
+const scrollSmoothlyToTop = (id) => {
+  $(`#${id}`).animate({
+    scrollLeft: 0,
+  }, 0);
+}
+</script>
