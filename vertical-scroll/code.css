@@ -1,11 +1,11 @@
-.div {
+.box {
   width: 150px;
   height: 25px;
   background-color: orange;
   overflow-x: auto;
 }
 
-.div div {
+.box div {
   height: 25px;
   width: 850px;
   background-color: black;
