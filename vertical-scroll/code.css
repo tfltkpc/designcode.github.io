@@ -2,7 +2,7 @@
   width: 150px;
   height: 25px;
   background-color: orange;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 #scrollbox div {
