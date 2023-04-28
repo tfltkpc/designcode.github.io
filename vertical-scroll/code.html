@@ -1,38 +1,28 @@
-<html>
+<html lang="en">
   <head>
-    <lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="code.css">
     <title>designcode</title>
   </head>
   <body>
-    <button onClick="scrollToBottom('div')">Scroll to Bottom</button>
-    <button onClick="scrollSmoothlyToBottom('div')">Scroll <b>smoothly</b> to Bottom</button>
-    <hr />
-    
-    <!-- body content -->
-    <div id="box">
-      <div>
-        京葉線は、新木場駅での線路に人立ち入りの影響で遅れが生じています。
-      </div>
+    <div id="scrollbox">
+      <div>Long body content</div>
     </div>
-    <hr />
-    <button onClick="scrollToTop('div')">Scroll to Top</button>
-    <button onClick="scrollSmoothlyToTop('div')">Scroll <b>smoothly</b> to Top</button>
 
     <script>
       const scrollSmoothlyToBottom = (id) => {
         const element = $(`#${id}`);
-        element.animate({scrollLeft: element.prop("scrollWidth")}, 10000, 'linear');
-        scrollSmoothlyToTop('div');
-        scrollSmoothlyToBottom('div');
+        element.animate({scrollLeft: element.prop("scrollWidth")}, 5000, 'linear');
+        setTimeout(scrollSmoothlyToTop, 5000, 'div');
+        setTimeout(scrollSmoothlyToBottom, 6000, 'div')
       }
 
-      // Require jQuery
       const scrollSmoothlyToTop = (id) => {
         $(`#${id}`).animate({scrollLeft: 0,}, 0);
       }
+
+      setTimeout(scrollSmoothlyToBottom, 500, 'div');
     </script>
     
   </body>
