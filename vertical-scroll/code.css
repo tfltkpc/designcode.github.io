@@ -1,12 +1,11 @@
-.box {
+#scrollbox {
   width: 150px;
   height: 25px;
   background-color: orange;
   overflow-x: auto;
-  box-sizing: border-box;
 }
 
-.box div {
+#scrollbox div {
   height: 25px;
   width: 850px;
   background-color: black;
