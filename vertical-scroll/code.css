@@ -3,6 +3,7 @@
   height: 25px;
   background-color: orange;
   overflow-x: auto;
+  box-sizing: border-box;
 }
 
 .box div {
