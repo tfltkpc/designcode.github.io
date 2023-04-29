@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -5,26 +6,26 @@
     <link rel="stylesheet" type="text/css" href="code.css">
     <title>designcode</title>
   </head>
-  <body>
+  <body onload="loadFuncs()">
     <div id="scrollbox">
       <div>Long body content</div>
     </div>
-
+  
     <script>
       const scrollSmoothlyToBottom = (id) => {
         const element = $(`#${id}`);
         element.animate({scrollLeft: element.prop("scrollWidth")}, 5000, 'linear');
-        setTimeout(scrollSmoothlyToTop, 5000, 'div');
-        setTimeout(scrollSmoothlyToBottom, 6000, 'div')
+        setTimeout(scrollSmoothlyToTop, 5000, 'scrollbox');
+        setTimeout(scrollSmoothlyToBottom, 6000, 'scrollbox')
       }
 
       const scrollSmoothlyToTop = (id) => {
         $(`#${id}`).animate({scrollLeft: 0,}, 0);
       }
-
-      setTimeout(scrollSmoothlyToBottom, 500, 'div');
+     
+      function loadFuncs() {
+        setTimeout(scrollSmoothlyToBottom, 500, 'scrollbox');
+      }     
     </script>
-    
   </body>
 </html>
-    
