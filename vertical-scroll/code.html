@@ -6,26 +6,22 @@
     <link rel="stylesheet" type="text/css" href="code.css">
     <title>designcode</title>
   </head>
-  <body onload="loadFuncs()">
+  <body onload="scrollSmoothlyToBottom('scrollbox')">
     <div id="scrollbox">
       <div>　　 　　　　　　　Long body content</div>
     </div>
   
     <script>
-      const scrollSmoothlyToBottom = (id) => {
+      function scrollSmoothlyToBottom(id) {
         const element = $(`#${id}`);
         element.animate({scrollLeft: element.prop("scrollWidth")}, 4000, 'linear');
         setTimeout(scrollSmoothlyToTop, 4000, 'scrollbox');
         setTimeout(scrollSmoothlyToBottom, 4000, 'scrollbox')
       }
 
-      const scrollSmoothlyToTop = (id) => {
+      function scrollSmoothlyToTop(id) {
         $(`#${id}`).animate({scrollLeft: 0,}, 0);
       }
-     
-      function loadFuncs() {
-        scrollSmoothlyToBottom('scrollbox');
-      }     
     </script>
   </body>
 </html>
