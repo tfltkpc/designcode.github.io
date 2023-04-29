@@ -8,15 +8,15 @@
   </head>
   <body onload="loadFuncs()">
     <div id="scrollbox">
-      <div>Long body content</div>
+      <div>　　 　　　　　　　Long body content</div>
     </div>
   
     <script>
       const scrollSmoothlyToBottom = (id) => {
         const element = $(`#${id}`);
-        element.animate({scrollLeft: element.prop("scrollWidth")}, 5000, 'linear');
-        setTimeout(scrollSmoothlyToTop, 5000, 'scrollbox');
-        setTimeout(scrollSmoothlyToBottom, 6000, 'scrollbox')
+        element.animate({scrollLeft: element.prop("scrollWidth")}, 4000, 'linear');
+        setTimeout(scrollSmoothlyToTop, 4000, 'scrollbox');
+        setTimeout(scrollSmoothlyToBottom, 4000, 'scrollbox')
       }
 
       const scrollSmoothlyToTop = (id) => {
@@ -24,8 +24,7 @@
       }
      
       function loadFuncs() {
-        alert("hello");
-        setTimeout(scrollSmoothlyToBottom, 500, 'scrollbox');
+        scrollSmoothlyToBottom('scrollbox');
       }     
     </script>
   </body>
